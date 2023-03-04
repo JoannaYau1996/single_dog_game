@@ -45,7 +45,7 @@ export default function App() {
       if (user_count >= 40) {
         setTruth("You deserve to be single.")
       } else if (user_count < 40 && user_count >= 30) {
-        setTruth("Look at your speed, no wonder you can't find a girlfriend.")
+        setTruth("Look at your speed, no wonder you are single.")
       } else if (user_count < 30 && user_count >= 20) {
         setTruth("Um.... I guess you have been single for more than 10 years.")
       } else if (user_count < 20 && user_count >= 10) {
