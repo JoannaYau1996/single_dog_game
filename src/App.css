@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@400;700&family=Bungee&display=swap');
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+  font-family: 'Bungee', cursive;
+  user-select:none;
+}
+
+.blackboard{
+  border: 1rem solid #ff9500;
+  background: #f4f4a9;
+}
+
+
+#name{
+  max-width:50%;
+  background: none; 
+  border:none ;
+  border-bottom:3px solid #3d2a00;
+  text-align: center;
+}
+
+#name:focus{
+  outline:none;
+}
+
+.startbtn{
+  vertical-align: bottom;
+  border-radius: 5px;
+}
+
+.startbtn:hover,
+.rule>button:hover,
+.restartbtn:hover{
+  background: #ff9500;
+}
+.gamepage{
+  border: 1rem solid #ff9500;
+}
+
+.user_playground{
+  background: #f4f4a9;
+}
+.computer_playground{
+  background: #ffb3b3;
+}
+
+.title{
+  color:#c6780c;
+  text-shadow: 3px 3px #3d2a00;
+}
+
+.rule,.cpwin{
+  background: #fff;
+  line-height: 2rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+  z-index:3;
+  border: 3px solid #333;
+}
+
+.rule>p,
+.truth{
+  font-family: 'Advent Pro', sans-serif;
+}
+.rule>p>span{
+  font-family: 'Advent Pro', sans-serif;
+  font-weight:bold;
+  color: #c6780c;
+}
+
+.rule>button{
+  border-radius: 5px;
+}
+
+.counter{
+  font-size: 20vh;
+}
+.truth{
+  font-size: 1.5rem;
+  line-height: 50px;
+}
+
+.restartbtn{
+  border-radius: 5px;
+}
+
+.advent{
+  ont-family: 'Advent Pro', sans-serif;
+}
+
+.press{
+  color: #c6780c;
+  animation: cute 2s infinite;
+
+}
+
+@keyframes cute{
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.05);
+  }
+}
