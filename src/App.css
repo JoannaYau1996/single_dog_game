@@ -38,6 +38,7 @@
 }
 .gamepage{
   border: 1rem solid #ff9500;
+  overflow: hidden;
 }
 
 .user_playground{

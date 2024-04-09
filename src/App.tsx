@@ -1,5 +1,6 @@
 import './App.css'
 import { useState, useRef, useEffect } from 'react';
+import { isMobile } from 'react-device-detect';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function App() {
@@ -43,24 +44,24 @@ export default function App() {
     if (computer_count == 0) {
       setCpwin(true);
       if (user_count >= 40) {
-        setTruth("You deserve to be single.")
+        setTruth("Congratulations! You've earned the title of 'Forever Alone.'")
       } else if (user_count < 40 && user_count >= 30) {
-        setTruth("Look at your speed, no wonder you are single.")
+        setTruth("Wow, your lightning-fast speed is truly impressive. No wonder you're single.")
       } else if (user_count < 30 && user_count >= 20) {
-        setTruth("Um.... I guess you have been single for more than 10 years.")
+        setTruth("Um... I guess you've been enjoying the single life for over a decade. That's something.")
       } else if (user_count < 20 && user_count >= 10) {
-        setTruth("HaHaHaHa")
+        setTruth("HaHaHaHa, loser! Still a long way to go.")
       } else if (user_count < 10 && user_count > 1) {
-        setTruth("You almost beat the computer, so it seems like you really want to get out of the single status,huh.")
+        setTruth("You almost beat the computer. Seems like you're desperate to escape the single status, huh?")
       } else if (user_count == 1) {
-        setTruth("HAHAHAHAHA. Maybe being single is your destiny.");
+        setTruth("HAHAHAHAHA. Maybe being single is your destiny. Embrace it!");
       }
 
     } else if (user_count == 0) {
       setComputerstart(false);
       setComputer_count(computer_count);
       setUserwin(true)
-      setTruth("WoW, your speed is impressive, you must be a relationship virgin.")
+      setTruth("Wow, your speed is truly impressive. You must be a relationship virgin.")
     }
   }
 
@@ -125,13 +126,13 @@ export default function App() {
 
 
       {rule && <div className='container-fluid text-center p-0 m-0 w-100 vh-100 gamepage'>
-        <div className='row m-0 h-100 position-relative'>
+        <div className='row m-0 h-100 p-0 position-relative'>
 
-          {!start && <div className='col-11 col-md-5 p-5 position-absolute rule '>
+          {!start && <div className='col-11 col-md-6 p-3 position-absolute rule '>
             <h2>How To PLay:</h2>
-            <p className='fs-4 mt-5'>
-              <span>{name}</span> I know you've been single for a long time. <br /><br />
-              Press the space bar to decrease the number of years that you will be single, <br /> <br />do your best to beat the computer, and prove that you deserve to be out of your single status.</p>
+            <p className='fs-4 mt-3'>
+              <span>{name}</span> I see you've been single for what feels like an eternity. How tragic! <br />
+              Press the space bar to decrease the number of years you're doomed to spend alone. <br /> <br />But let's be honest, can you really beat the computer?<br /> Show us your best and prove that you actually deserve to escape your single status. Good luck, you'll need it!</p>
             <button type="button" className='px-4 py-1' onClick={gamestart} >OK</button>
           </div>}
 
@@ -159,7 +160,7 @@ export default function App() {
               <h4 className="mt-3 press">( Press Space bar to start )</h4>
             }
           </div>
-          <div className='col-12 col-md-6 computer_playground p-3 d-flex flex-column justify-content-center'>
+          <div className='col-12 col-md-6 computer_playground pt-3 d-flex flex-column justify-content-center'>
             <h1>Computer</h1>
             <h1 className='counter'>{computer_count}</h1>
           </div>
