@@ -1,13 +1,18 @@
-## Running React on Repl.it
+Welcome to Sigle Dog Game - an exciting game designed with you in mind!
 
-[React](https://reactjs.org/) is a popular JavaScript library for building user interfaces.
+Have you ever heard the saying, "Single people have lightning-fast hands"? Well, get ready to put that theory to the test! In this game, you'll go head-to-head against a computer opponent in a lightning-fast speed challenge. But here's the fun twist: we'll use your performance to calculate just how long you'll remain single!
 
-[Vite](https://vitejs.dev/) is a blazing fast frontend build tool that includes features like Hot Module Reloading (HMR), optimized builds, and TypeScript support out of the box.
+Instructions:
 
-Using the two in conjunction is one of the fastest ways to build a web app.
+For Mobile: Tap the screen repeatedly to decrease the number.
+For Laptop/Desktop: Press the space bar repeatedly to decrease the number.
 
-### Getting Started
-- Hit run
-- Edit [App.tsx](#src/App.tsx) and watch it live update!
+The computer is your formidable opponent, constantly decreasing the number every 0.1 seconds. Stay on your toes and maintain lightning-fast reflexes to stay ahead!
 
-By default, Replit runs the `dev` script, but you can configure it by changing the `run` field in the [configuration file](#.replit). Here are the vite docs for [serving production websites](https://vitejs.dev/guide/build.html)
+Keep tapping or pressing the space bar until the number reaches zero. The faster you deplete the number, the closer you are to breaking free from singledom!
+
+Remember, this game is all about speed and proving that you have what it takes to leave the single zone behind. So, get those fingers ready, embrace the challenge, and show the world your lightning-fast skills!
+
+
+
+
