@@ -2,7 +2,7 @@ Welcome to Sigle Dog Game - an exciting game designed with you in mind!
 
 Have you ever heard the saying, "Single people have lightning-fast hands"? Well, get ready to put that theory to the test! In this game, you'll go head-to-head against a computer opponent in a lightning-fast speed challenge. But here's the fun twist: we'll use your performance to calculate just how long you'll remain single!
 
-Instructions:
+How to play:
 
 For Mobile: Tap the screen repeatedly to decrease the number.
 For Laptop/Desktop: Press the space bar repeatedly to decrease the number.
