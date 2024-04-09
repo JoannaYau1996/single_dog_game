@@ -132,24 +132,24 @@ export default function App() {
       {rule && <div className='container-fluid text-center p-0 m-0 w-100 vh-100 gamepage'>
         <div className='row m-0 h-100 p-0 position-relative'>
 
-          {!start && <div className='col-11 col-md-6 p-3 position-absolute rule '>
+          {!start && <div className='col-11 col-md-5 p-3 p-md-5 position-absolute rule'>
             <h2>How To PLay:</h2>
-            <p className='fs-4 mt-3'>
+            <p className='fs-5 mt-3'>
               <span>{name}</span> I see you've been single for what feels like an eternity. How tragic! <br />
               {isMobile ? 'Tap the screen' : 'Press the space bar'} to decrease the number of years you're doomed to spend alone. <br /> <br />But let's be honest, can you really beat the computer?<br /> Show us your best and prove that you actually deserve to escape your single status. Good luck, you'll need it!</p>
             <button type="button" className='px-4 py-1' onClick={gamestart} >OK</button>
           </div>}
 
-          {cpwin && <div className='col-11 col-md-5 p-5 position-absolute cpwin '>
+          {cpwin && <div className='col-11 col-md-5 p-3 p-md-5 position-absolute cpwin '>
             <h1 className="mb-4">Computer Win</h1>
             <h4><span className='advent'>you will be single for the next<br /> </span>{user_count}<span className='advent'> years</span></h4>
-            <p className='truth'>{truth}</p>
+            <p className='truth fs-5 mt-3'>{truth}</p>
             <button type="button" className='px-4 py-1 restartbtn' onClick={restart}  >restart</button>
           </div>}
 
-          {userwin && <div className='col-11 col-md-5 p-5 position-absolute cpwin '>
+          {userwin && <div className='col-11 col-md-5 p-3 p-md-5 position-absolute cpwin '>
             <h1>You Win</h1>
-            <p className='truth'>WoW, your speed is impressive, you must be a relationship virgin.</p>
+            <p className='truth fs-5 mt-3'>WoW, your speed is impressive, you must be a relationship virgin.</p>
             <h4>Good Luck</h4>
             <button type="button" className='px-4 py-1 restartbtn' onClick={restart}  >restart</button>
           </div>}
