@@ -20,10 +20,15 @@ export default function App() {
 
 
   useEffect(() => {
-    document.addEventListener('keyup', decrease);
+    if (isMobile) {
+      document.addEventListener('touchstart', decrease);
+    } else {
+      document.addEventListener('keyup', decrease);
+    }
     check()
     return () => {
       document.removeEventListener('keyup', decrease);
+      document.removeEventListener('touchstart', decrease);
     }
   });
 
@@ -68,8 +73,7 @@ export default function App() {
 
 
   function decrease(e) {
-    if (e.code == "Space") {
-      e.preventDefault();
+    if (e.code == "Space" || isMobile) {
       if (start == true && computer_count > 0 && user_count > 0) {
         setUser_count(prev => prev - 1);
         setComputerstart(true);
@@ -132,7 +136,7 @@ export default function App() {
             <h2>How To PLay:</h2>
             <p className='fs-4 mt-3'>
               <span>{name}</span> I see you've been single for what feels like an eternity. How tragic! <br />
-              Press the space bar to decrease the number of years you're doomed to spend alone. <br /> <br />But let's be honest, can you really beat the computer?<br /> Show us your best and prove that you actually deserve to escape your single status. Good luck, you'll need it!</p>
+              {isMobile ? 'Tap the screen' : 'Press the space bar'} to decrease the number of years you're doomed to spend alone. <br /> <br />But let's be honest, can you really beat the computer?<br /> Show us your best and prove that you actually deserve to escape your single status. Good luck, you'll need it!</p>
             <button type="button" className='px-4 py-1' onClick={gamestart} >OK</button>
           </div>}
 
@@ -157,7 +161,7 @@ export default function App() {
             <h1 className='counter'>{user_count}</h1>
             <h4>years</h4>
             {pressremind &&
-              <h4 className="mt-3 press">( Press Space bar to start )</h4>
+              <h4 className="mt-3 press">{isMobile ? '( Tap here to start )' : '( Press Space bar to start )'}</h4>
             }
           </div>
           <div className='col-12 col-md-6 computer_playground pt-3 d-flex flex-column justify-content-center'>
